@@ -9,77 +9,226 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .scroll-bar::-webkit-scrollbar{
+        width: 0px;
+      }
+
+    </style>
 </head>
 <body data-theme="l">
     <!-- navbar starts here -->
-    <div class="navbar bg-primary">
-        <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-        </div>
-        <div class="flex-none gap-2">
-          <div class="form-control">
-            <input type="text" id="search-field" placeholder="Search" class="input input-bordered" />
-          </div>
-          <div class="dropdown dropdown-end">
-            <!-- drawer open button here -->
-            <label for="my-drawer-4" class="text-3xl" id="cart-btn">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </label>
-
-          </div>
+    <div class="navbar bg-slate-700 yellow">
+      <div class="flex-1">
+        <div class="flex text-white items-center ml-10">
+          <img src="./images/logo.png" class="w-10" alt="">
+          <span class="text-xl ml-2 font-bold">PIXEL STORE</span>
         </div>
       </div>
+      <div class="flex-none gap-2">
+
+        <ul class="hidden md:flex">
+          <li class="ml-10">
+            <a class="text-white cursor-pointer hover:text-red-900 duration-200 font-bold"><i class="fa-solid fa-house mr-2 text-warning"></i>Home</a>
+          </li>
+
+          <li class="ml-10">
+            <a class="text-white cursor-pointer hover:text-red-900 duration-200 font-bold"><i class="fa-solid fa-heart text-warning mr-2"></i>WishList</a>
+          </li>
+
+          <li class="ml-10">
+            <a class="text-white cursor-pointer hover:text-red-900 duration-200 font-bold"><i class="fa-solid fa-trash mr-2 text-warning"></i>Recycle Bin</a>
+          </li>
+
+          <li class="mx-10">
+            <label for="my-drawer-4" class="drawer-button text-white cursor-pointer hover:text-red-900 duration-200 font-bold"><i class="fa-solid fa-cart-shopping mr-2 text-warning"></i> Cart</label>
+          </li>
+        </ul>
+
+
+
+        <div class="dropdown dropdown-end md:hidden">
+          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+            <i class="fa-solid fa-bars text-white font-bold"></i>
+          </label>
+          <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+            <li>
+              <a><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+              <a><i class="fa-solid fa-heart"></i> WishList</a>
+            </li>
+            <li>
+              <a><i class="fa-solid fa-trash"></i> Recycle Bin</a>
+            </li>
+            <li>
+              <label for="my-drawer-4" class="drawer-button"><i class="fa-solid fa-cart-shopping"></i> Cart</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 
       <!-- drawer here -->
 
-      <div class="drawer drawer-end">
+
+
+       <!-- drawer open button here -->
+       
+
+      <div class="drawer drawer-end ">
         <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content">
+        <div class="drawer-content scroll-bar">
           <!-- Page content here -->
           <h1 class="text-center font-bold text-3xl my-5">NEW ON PIXEL STORE</h1>
-            <div class="max-w-[1100px] gap-4 mx-auto min-h-[300px] grid md:grid-cols-3 sm:grid-cols-2">
+            <div class="max-w-[1100px] gap-4 mx-10 md:mx-auto min-h-[300px] grid md:grid-cols-3 sm:grid-cols-2">
                 <!-- cards are here -->
                 <div class="card bg-base-100 shadow-2xl p-4">
                     <figure class="">
-                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg" />
+                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg w-full" />
                     </figure>
                     <div class=" mt-[20px]">
-                      <h2 class="card-title">Shoes!</h2>
+                      <div class="flex justify-between">
+                        <h2 class="card-title">Shoes!</h2>
+                        <div class="flex text-lg">
+                          <span class="mr-4"><i class="fa-solid fa-heart text-slate-500"></i></span>
+                          <span><i class="fa-solid fa-square-minus text-red-700"></i></span>
+                        </div>
+                      </div>
                       <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="">
-                        <button class="btn btn-ghost w-full">Buy Now</button>
+                      <div class="mt-2 flex justify-between">
+                        <button class="btn btn-outline btn-primary w-[45%] mx-auto block"><i class="fa-solid fa-circle-info mr-2"></i> See Details</button>
+                        <button class="btn btn-outline btn-secondary w-[45%] mx-auto block"><i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now</button>
                       </div>
                     </div>
                   </div>
                 <div class="card bg-base-100 shadow-2xl p-4">
                     <figure class="">
-                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg" />
+                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg w-full" />
                     </figure>
                     <div class=" mt-[20px]">
-                      <h2 class="card-title">Shoes!</h2>
+                      <div class="flex justify-between">
+                        <h2 class="card-title">Shoes!</h2>
+                        <div class="flex text-lg">
+                          <span class="mr-4"><i class="fa-solid fa-heart text-slate-500"></i></span>
+                          <span><i class="fa-solid fa-square-minus text-red-700"></i></span>
+                        </div>
+                      </div>
                       <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="">
-                        <button class="btn btn-ghost w-full">Buy Now</button>
+                      <div class="mt-2 flex justify-between">
+                        <button class="btn btn-outline btn-primary w-[45%] mx-auto block"><i class="fa-solid fa-circle-info mr-2"></i> See Details</button>
+                        <button class="btn btn-outline btn-secondary w-[45%] mx-auto block"><i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now</button>
                       </div>
                     </div>
                   </div>
                 <div class="card bg-base-100 shadow-2xl p-4">
                     <figure class="">
-                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg" />
+                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg w-full" />
                     </figure>
-                    <div class="mt-[20px]">
-                      <h2 class="card-title">Shoes!</h2>
+                    <div class=" mt-[20px]">
+                      <div class="flex justify-between">
+                        <h2 class="card-title">Shoes!</h2>
+                        <div class="flex text-lg">
+                          <span class="mr-4"><i class="fa-solid fa-heart text-slate-500"></i></span>
+                          <span><i class="fa-solid fa-square-minus text-red-700"></i></span>
+                        </div>
+                      </div>
                       <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="">
-                        <button class="btn btn-ghost w-full">Buy Now</button>
+                      <div class="mt-2 flex justify-between">
+                        <button class="btn btn-outline btn-primary w-[45%] mx-auto block"><i class="fa-solid fa-circle-info mr-2"></i> See Details</button>
+                        <button class="btn btn-outline btn-secondary w-[45%] mx-auto block"><i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now</button>
                       </div>
                     </div>
                   </div>
-                
+                <div class="card bg-base-100 shadow-2xl p-4">
+                    <figure class="">
+                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg w-full" />
+                    </figure>
+                    <div class=" mt-[20px]">
+                      <div class="flex justify-between">
+                        <h2 class="card-title">Shoes!</h2>
+                        <div class="flex text-lg">
+                          <span class="mr-4"><i class="fa-solid fa-heart text-slate-500"></i></span>
+                          <span><i class="fa-solid fa-square-minus text-red-700"></i></span>
+                        </div>
+                      </div>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="mt-2 flex justify-between">
+                        <button class="btn btn-outline btn-primary w-[45%] mx-auto block"><i class="fa-solid fa-circle-info mr-2"></i> See Details</button>
+                        <button class="btn btn-outline btn-secondary w-[45%] mx-auto block"><i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card bg-base-100 shadow-2xl p-4">
+                    <figure class="">
+                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg w-full" />
+                    </figure>
+                    <div class=" mt-[20px]">
+                      <div class="flex justify-between">
+                        <h2 class="card-title">Shoes!</h2>
+                        <div class="flex text-lg">
+                          <span class="mr-4"><i class="fa-solid fa-heart text-slate-500"></i></span>
+                          <span><i class="fa-solid fa-square-minus text-red-700"></i></span>
+                        </div>
+                      </div>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="mt-2 flex justify-between">
+                        <button class="btn btn-outline btn-primary w-[45%] mx-auto block"><i class="fa-solid fa-circle-info mr-2"></i> See Details</button>
+                        <button class="btn btn-outline btn-secondary w-[45%] mx-auto block"><i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card bg-base-100 shadow-2xl p-4">
+                    <figure class="">
+                      <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-lg w-full" />
+                    </figure>
+                    <div class=" mt-[20px]">
+                      <div class="flex justify-between">
+                        <h2 class="card-title">Shoes!</h2>
+                        <div class="flex text-lg">
+                          <span class="mr-4"><i class="fa-solid fa-heart text-slate-500"></i></span>
+                          <span><i class="fa-solid fa-square-minus text-red-700"></i></span>
+                        </div>
+                      </div>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="mt-2 flex justify-between">
+                        <button class="btn btn-outline btn-primary w-[45%] mx-auto block"><i class="fa-solid fa-circle-info mr-2"></i> See Details</button>
+                        <button class="btn btn-outline btn-secondary w-[45%] mx-auto block"><i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+
                   
                   
             </div>
+
+
+            <!-- footer -->
+            <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+              <div>
+                <span class="footer-title">Services</span> 
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+              </div> 
+              <div>
+                <span class="footer-title">Company</span> 
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+              </div> 
+              <div>
+                <span class="footer-title">Legal</span> 
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+              </div>
+            </footer>
         </div> 
         <div class="drawer-side">
           <label for="my-drawer-4" class="drawer-overlay"></label>
